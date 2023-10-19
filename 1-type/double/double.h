@@ -20,6 +20,5 @@ double get_fractional(double x) {
         x=x-(int)x;
     else
         x=(x-((int)x-1));
-
     return x;
 }
