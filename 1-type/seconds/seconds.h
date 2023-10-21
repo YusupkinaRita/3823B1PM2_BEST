@@ -39,10 +39,6 @@ int get_magical_value(int seconds) {
     int hours = get_hours(seconds);
     int minutes = get_minutes(seconds);
     int second = get_seconds(seconds);
-<<<<<<< HEAD
     int x= (pow(((year+month)/(1+day+second)),2))+((minutes+minutes/(1+hours))/(1+hours));
     return x; 
-=======
-    return 0; // Not implementation
->>>>>>> 73e9291e52882346103cae301afc4058a0375e8c
 }
