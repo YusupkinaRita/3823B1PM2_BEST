@@ -1,11 +1,8 @@
 #include<stdio.h>
 int get_time(long long angle) {
     int h, m, s;
-    scanf("%d", &angle);
-    s=15*angle/90;
-    h=s/3600;
-    m=s/60-60*h;
-    s=s-h*3600-m*60;
-    printf("%d %d %d", h, m, s);
-    return 0; 
+    s=(angle*15/90)%60;
+    m=((angle*15/90)/60)%60;
+    h=((angle*15/90)/3600)%24;
+    return h*10000+m*100+s;
 }
