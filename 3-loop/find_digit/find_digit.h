@@ -13,7 +13,9 @@ char find_digit(double number, char digit){
         if(number>=1){
             x=(int)(number/(pow(10,size-i)))%10;
             if(x==digit){
-                a=i;break;}
+                a=i;
+                break;
+                }
         }
     }
     if(a==0){
@@ -22,7 +24,7 @@ char find_digit(double number, char digit){
             x=(int)(number*10);
             number=number*10-x;
             if(x==digit){
-                a=i;break;}
+                a=i+1;break;}
     }
     }
         
