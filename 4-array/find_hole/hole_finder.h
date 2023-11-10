@@ -16,10 +16,6 @@ int hole_finder(int matrix[], int length, int width){
             }
     }
     i0=el/width;
-   // if(el%width==0)
-    //    i0=i0-1;
     j=(el-width*i0)%width;
-   // if(el+1%length==0)
-       // j=j-1;
     return i0*100+j;
 }
