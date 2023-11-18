@@ -2,17 +2,22 @@
 
 int calcsize(void* memory){
     int size=0;
-    int* p=memory;
-    for(int i=0; i<10000000000;i++){
-        int x=*(p+i);
-        if((p[i]==11)&&(p[i+1]==47)){
-        //if((*(p+i)==11)&&(*(p + i + 1)==47))
-        size=i+2;
-        break;
+    char* p=memory;
+    int in1=0, in2=0;
+    for(int i=0;;i++){
+        if (*(p+i)==11){
+            in1=i;
+            break;
         }
     }
-//TT
-    
+    for(int i=0;;i++){
+        if (*(p+i)==47){
+            in2=i;
+            break;
+        } 
+    }
+    int b=in2-in1;
+    size=in2+b;
 
     return size;
 }
