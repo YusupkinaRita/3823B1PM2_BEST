@@ -37,7 +37,7 @@ char robot_move(int xs[], int ys[], int num_points, double area_radius, int xt, 
             }
 
         }
-        
+
         for(int i=xs[j];i<xs[j+1];i++){
             x=i;
             if(((x+area_radius>=xt)&&(xt>=x))||((x-area_radius<=xt)&&(xt<=x))){

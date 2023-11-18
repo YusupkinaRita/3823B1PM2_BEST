@@ -1,9 +1,20 @@
 #include <math.h>
 
 unsigned long long pack_ull(unsigned char arr[], int size){
-    return 100;
+    unsigned long long sum=0;
+    for (int i=size-1;i>=0;i--){
+        sum=sum|arr[i];
+        if (i==0)
+        break;
+        sum=sum<<8;
+    
+    }
+    return sum;
 }
 
 unsigned char unpack_ull(unsigned long long input){
-    return 5;
+    unsigned char x5;
+    x5=input>>32;
+
+    return x5;
 }
