@@ -12,5 +12,12 @@ struct Patient
 
 
 unsigned char get_queue_len(struct Patient* persons){
-    return 0;
+    int num=1;
+    for(int i=0;;i++){
+        if(persons[i].nextPatient!=NULL)
+        num++;
+        else
+        break;
+    }
+    return num;
 }
